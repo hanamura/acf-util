@@ -1,5 +1,7 @@
 {
     "name": "hanamura/acf-util",
+    "description": "Utilities for Advanced Custom Fields",
+    "license": "MIT",
     "authors": [
         {
             "name": "Taro Hanamura",
