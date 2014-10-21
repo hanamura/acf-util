@@ -37,7 +37,7 @@ class AcfValue implements \ArrayAccess
         }
       }
 
-      // change [raw sub field values] to [AcfObject instances]
+      // change [raw sub field values] to [AcfValue instances]
 
       return array_map(function($array) use($sub_field_map) {
         foreach ($array as $key => $value) {
