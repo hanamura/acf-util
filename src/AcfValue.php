@@ -39,6 +39,8 @@ class AcfValue implements \ArrayAccess
 
       // change [raw sub field values] to [AcfValue instances]
 
+      $value = is_array($field['value']) ? $field['value'] : [];
+
       return array_map(function($array) use($sub_field_map) {
         foreach ($array as $key => $value) {
           $array_[$key] = array();
@@ -54,7 +56,7 @@ class AcfValue implements \ArrayAccess
           }
         }
         return new static($array_);
-      }, $field['value']);
+      }, $value);
 
     } else {
       return $this->_array[$name]['value'];
